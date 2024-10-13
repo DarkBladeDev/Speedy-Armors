@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://5sch8l4gjh5b"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_gblqe"]
+[ext_resource type="Texture2D" uid="uid://cvw7se6ywga2a" path="res://assets/Images/wallpaperbetter.com_1920x1080.jpg" id="2_a3dhc"]
+[ext_resource type="FontFile" uid="uid://crh68ah41aafe" path="res://assets/Fonts/04B_30__.TTF" id="3_6p34v"]
+[ext_resource type="AudioStream" uid="uid://cyp1d5qfqdycl" path="res://assets/Music/Soundtracks/Raincoat Adventure.mp3" id="4_s11fd"]
+[ext_resource type="PackedScene" uid="uid://benngalhf7out" path="res://GUI/OptionsMenu.tscn" id="5_64p50"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db3dg"]
+bg_color = Color(0.345098, 0.462745, 0.701961, 0.54902)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0fo6"]
+bg_color = Color(0.345098, 0.462745, 0.701961, 0.54902)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_npnqd"]
+bg_color = Color(0.345098, 0.462745, 0.701961, 0.54902)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_right = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gblqe")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 108.0
+offset_bottom = 96.0
+scale = Vector2(11.9676, 6.7493)
+texture = ExtResource("2_a3dhc")
+expand_mode = 1
+
+[node name="Play" type="Button" parent="TextureRect"]
+layout_mode = 2
+offset_left = 20.2213
+offset_top = 21.1874
+offset_right = 144.221
+offset_bottom = 38.1874
+scale = Vector2(0.388349, 0.875543)
+theme_override_fonts/font = ExtResource("3_6p34v")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_db3dg")
+text = "Play"
+
+[node name="Options" type="Button" parent="TextureRect"]
+layout_mode = 2
+offset_left = 15.3748
+offset_top = 37.4854
+offset_right = 139.375
+offset_bottom = 54.4854
+scale = Vector2(0.47525, 1)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_6p34v")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_u0fo6")
+text = "Options"
+
+[node name="Quit" type="Button" parent="TextureRect"]
+layout_mode = 2
+offset_left = 18.9679
+offset_top = 55.8576
+offset_right = 142.968
+offset_bottom = 72.8576
+scale = Vector2(0.401718, 0.834057)
+theme_override_fonts/font = ExtResource("3_6p34v")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_npnqd")
+text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_s11fd")
+autoplay = true
+
+[node name="OptionsMenu" parent="." instance=ExtResource("5_64p50")]
+visible = false

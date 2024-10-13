@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://onnrusv6v4xl"]
+
+[ext_resource type="PackedScene" uid="uid://bhywei28vnllv" path="res://Game/Players.tscn" id="1_eqtjx"]
+[ext_resource type="Texture2D" uid="uid://d4evtnefidx1y" path="res://assets/Pixel Adventure 1/Free/Background/Purple.png" id="1_lqnb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4r7m"]
+size = Vector2(1286, 70)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Suelo" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionSuelo" type="CollisionShape2D" parent="Suelo"]
+position = Vector2(634, 676)
+shape = SubResource("RectangleShape2D_s4r7m")
+
+[node name="SpriteSuelo" type="Sprite2D" parent="Suelo"]
+position = Vector2(639.75, 676)
+scale = Vector2(20.3203, 1)
+texture = ExtResource("1_lqnb8")
+
+[node name="Players" parent="Suelo" instance=ExtResource("1_eqtjx")]

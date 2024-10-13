@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://benngalhf7out"]
+
+[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_mqj4a"]
+[ext_resource type="Texture2D" uid="uid://cvw7se6ywga2a" path="res://assets/Images/wallpaperbetter.com_1920x1080.jpg" id="2_7glyi"]
+[ext_resource type="FontFile" uid="uid://crh68ah41aafe" path="res://assets/Fonts/04B_30__.TTF" id="3_fg787"]
+[ext_resource type="Script" path="res://scripts/audio.gd" id="4_t4gfq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0fo6"]
+bg_color = Color(0.345098, 0.462745, 0.701961, 0.403922)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs53v"]
+bg_color = Color(0.223529, 0.227451, 0.423529, 0.694118)
+
+[node name="MainMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_mqj4a")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 19.0
+offset_right = 115.0
+offset_bottom = 96.0
+scale = Vector2(11.9676, 6.7493)
+texture = ExtResource("2_7glyi")
+expand_mode = 1
+
+[node name="Music" type="Label" parent="Background"]
+layout_mode = 1
+offset_left = 24.9006
+offset_top = 12.8902
+offset_right = 106.901
+offset_bottom = 34.8902
+scale = Vector2(0.555838, 0.726753)
+theme_override_fonts/font = ExtResource("3_fg787")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_u0fo6")
+text = "Audio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Audio" type="HBoxContainer" parent="Background"]
+layout_mode = 0
+offset_left = 18.6336
+offset_top = 27.5584
+offset_right = 194.634
+offset_bottom = 66.5584
+scale = Vector2(0.329496, 0.487482)
+script = ExtResource("4_t4gfq")
+
+[node name="SFXLabel" type="Label" parent="Background/Audio"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fg787")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_qs53v")
+text = "SFX"
+
+[node name="SFXBar" type="HSlider" parent="Background/Audio"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -30.0
+max_value = 0.0
+
+[node name="Return" type="Button" parent="Background"]
+layout_mode = 1
+offset_left = 24.817
+offset_top = 61.9324
+offset_right = 110.817
+offset_bottom = 83.9324
+scale = Vector2(0.555838, 0.726753)
+theme_override_fonts/font = ExtResource("3_fg787")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_u0fo6")
+text = "Return"
+
+[connection signal="value_changed" from="Background/Audio/SFXBar" to="Background/Audio" method="_on_sfx_bar_value_changed"]

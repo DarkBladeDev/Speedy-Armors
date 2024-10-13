@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck5lrw268mgfy"]
+
+[ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_axl7q"]
+[ext_resource type="FontFile" uid="uid://crh68ah41aafe" path="res://assets/Fonts/04B_30__.TTF" id="2_o1f8r"]
+[ext_resource type="PackedScene" uid="uid://benngalhf7out" path="res://GUI/OptionsMenu.tscn" id="3_rvqt1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iyo45"]
+bg_color = Color(0.345098, 0.462745, 0.701961, 0.54902)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmbip"]
+bg_color = Color(0.345098, 0.462745, 0.701961, 0.54902)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_axl7q")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0823529, 0.0823529, 0.0823529, 0.321569)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 239.0
+offset_top = 27.0
+offset_right = 363.0
+offset_bottom = 44.0
+scale = Vector2(4.70338, 7.27196)
+theme_override_fonts/font = ExtResource("2_o1f8r")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyo45")
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resume" type="Button" parent="."]
+visible = false
+offset_left = 247.0
+offset_top = 183.0
+offset_right = 371.0
+offset_bottom = 200.0
+scale = Vector2(4.70338, 7.27196)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_o1f8r")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyo45")
+text = "Resume"
+
+[node name="Options" type="Button" parent="."]
+visible = false
+offset_left = 247.0
+offset_top = 339.0
+offset_right = 371.0
+offset_bottom = 356.0
+scale = Vector2(4.70338, 7.27196)
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("2_o1f8r")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_iyo45")
+text = "Options"
+
+[node name="Quit" type="Button" parent="."]
+visible = false
+offset_left = 239.0
+offset_top = 501.0
+offset_right = 363.0
+offset_bottom = 518.0
+scale = Vector2(4.84554, 6.39809)
+theme_override_fonts/font = ExtResource("2_o1f8r")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxFlat_tmbip")
+text = "Quit"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("3_rvqt1")]
+visible = false

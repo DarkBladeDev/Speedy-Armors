@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyp1d5qfqdycl"
+path="res://.godot/imported/Raincoat Adventure.mp3-ee76e7bdeb25b8f8c8045ac27ee8c461.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/Soundtracks/Raincoat Adventure.mp3"
+dest_files=["res://.godot/imported/Raincoat Adventure.mp3-ee76e7bdeb25b8f8c8045ac27ee8c461.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
