@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://onnrusv6v4xl"]
+[gd_scene load_steps=49 format=3 uid="uid://onnrusv6v4xl"]
 
 [ext_resource type="Texture2D" uid="uid://b1sir4birf2es" path="res://assets/Sprites/background.jpg" id="1_ta4mq"]
 [ext_resource type="Script" path="res://scripts/player_1.gd" id="2_ln6pr"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cqp6nxpan2ofk" path="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Jump.png" id="6_7ankg"]
 [ext_resource type="Texture2D" uid="uid://ctd77jtuaqqjt" path="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Run.png" id="7_341ah"]
 [ext_resource type="PackedScene" uid="uid://ck5lrw268mgfy" path="res://GUI/PauseMenu.tscn" id="8_1ff55"]
+[ext_resource type="Script" path="res://scripts/player_2.gd" id="8_y6jjo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4r7m"]
 size = Vector2(1351.8, 62.4984)
@@ -308,7 +309,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionSuelo" type="CollisionShape2D" parent="Suelo"]
 position = Vector2(-169.678, 1)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_s4r7m")
 
 [node name="SpriteSuelo" type="Sprite2D" parent="Suelo"]
@@ -326,7 +326,6 @@ metadata/_edit_group_ = true
 [node name="CollisionPared" type="CollisionShape2D" parent="Pared"]
 position = Vector2(-678.39, 285.163)
 rotation = 1.5708
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_s4r7m")
 
 [node name="SpritePared" type="Sprite2D" parent="Pared"]
@@ -344,12 +343,33 @@ platform_wall_layers = 4
 script = ExtResource("2_ln6pr")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Players/Player1"]
+[node name="HitBox" type="CollisionShape2D" parent="Players/Player1"]
 position = Vector2(-2, 2)
 scale = Vector2(5.56838, 10.498)
 shape = SubResource("RectangleShape2D_doofo")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="Players/Player1"]
+position = Vector2(2, -24)
+scale = Vector2(0.949998, 1.26301)
+sprite_frames = SubResource("SpriteFrames_2ic23")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Player2" type="CharacterBody2D" parent="Players"]
+position = Vector2(101, 380.546)
+scale = Vector2(4.24319, 1.70963)
+collision_mask = 14
+platform_floor_layers = 4294967048
+platform_wall_layers = 4
+script = ExtResource("8_y6jjo")
+metadata/_edit_group_ = true
+
+[node name="HitBox" type="CollisionShape2D" parent="Players/Player2"]
+position = Vector2(-2, 2)
+scale = Vector2(5.56838, 10.498)
+shape = SubResource("RectangleShape2D_doofo")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="Players/Player2"]
 position = Vector2(2, -24)
 scale = Vector2(0.949998, 1.26301)
 sprite_frames = SubResource("SpriteFrames_2ic23")

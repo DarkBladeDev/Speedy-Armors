@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 
-
 var axis : Vector2
 var death : bool = false
 var is_facing_right : bool = true
@@ -31,7 +30,7 @@ func flip():
 		is_facing_right = not is_facing_right
 
 func jump(delta):
-	if Input.is_action_just_pressed("Jump_P1") and is_on_floor():
+	if Input.is_action_just_pressed("Jump_P2") and is_on_floor():
 		velocity.y = -jump_speed
 		
 	if not is_on_floor():
@@ -51,5 +50,5 @@ func update_animation():
 		Animated_sprite.play("Idle")
 
 func move_x():
-	var input_axis = Input.get_axis("Move_left_P1", "Move_right_P1")
+	var input_axis = Input.get_axis("Move_left_P2", "Move_right_P2")
 	velocity.x = input_axis * move_speed
