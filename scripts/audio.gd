@@ -1,6 +1,6 @@
 extends Control
 
-@onready var MusicPlayer = $AudioStreamPlayer
+@onready var MusicPlayer = $SoundTrack
 
 var master_bus = AudioServer.get_bus_index("Master")
 

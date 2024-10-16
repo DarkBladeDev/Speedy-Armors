@@ -6,7 +6,9 @@ var axis : Vector2
 var death : bool = false
 var is_facing_right : bool = true
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 @onready var Animated_sprite = $AnimatedSprite
+@onready var SFXJump = $"../../SFX_Jump"
 
 @export_group("Motion")
 @export var move_speed : float = 200
@@ -32,6 +34,7 @@ func flip():
 
 func jump(delta):
 	if Input.is_action_just_pressed("Jump_P1") and is_on_floor():
+		SFXJump.play()
 		velocity.y = -jump_speed
 		
 	if not is_on_floor():
