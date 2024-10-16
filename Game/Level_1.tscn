@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://onnrusv6v4xl"]
+[gd_scene load_steps=53 format=3 uid="uid://onnrusv6v4xl"]
 
 [ext_resource type="Script" path="res://scripts/wall.gd" id="1_5qoys"]
 [ext_resource type="Texture2D" uid="uid://b1sir4birf2es" path="res://assets/Sprites/background.jpg" id="1_ta4mq"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://ctd77jtuaqqjt" path="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Run.png" id="7_341ah"]
 [ext_resource type="PackedScene" uid="uid://ck5lrw268mgfy" path="res://GUI/PauseMenu.tscn" id="8_1ff55"]
 [ext_resource type="Script" path="res://scripts/player_2.gd" id="8_y6jjo"]
+[ext_resource type="AudioStream" uid="uid://3hbjpj0owkjo" path="res://assets/SFX/Select 1.wav" id="11_86its"]
+[ext_resource type="AudioStream" uid="uid://ux1b34ia4omk" path="res://assets/SFX/Cancel 1.wav" id="12_3yudu"]
+[ext_resource type="AudioStream" uid="uid://b3x7w5la5p4cv" path="res://assets/SFX/Jump 1.wav" id="13_66ou6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4r7m"]
 size = Vector2(1351.8, 62.4984)
@@ -389,5 +392,11 @@ autoplay = "Idle"
 
 [node name="PauseMenu" parent="." instance=ExtResource("8_1ff55")]
 
-[connection signal="area_entered" from="Pared/CollisionPared" to="Players/Player1" method="_on_area_entered"]
-[connection signal="area_entered" from="Pared/CollisionPared" to="Players/Player2" method="_on_collision_pared_area_entered"]
+[node name="SFX_Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_86its")
+
+[node name="SFX_Cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_3yudu")
+
+[node name="SFX_Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_66ou6")

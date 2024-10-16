@@ -9,6 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var Animated_sprite = $AnimatedSprite
 @onready var SFXJump = $"../../SFX_Jump"
+@onready var Wall = $"../../Pared/CollisionPared"
 
 @export_group("Motion")
 @export var move_speed : float = 200
@@ -56,3 +57,7 @@ func update_animation():
 func move_x():
 	var input_axis = Input.get_axis("Move_left_P1", "Move_right_P1")
 	velocity.x = input_axis * move_speed
+	
+func check_player_wall():
+	if Wall.area_entered:
+		queue_free()
