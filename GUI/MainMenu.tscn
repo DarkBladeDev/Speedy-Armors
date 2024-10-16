@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://5sch8l4gjh5b"]
+[gd_scene load_steps=11 format=3 uid="uid://5sch8l4gjh5b"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_gblqe"]
 [ext_resource type="Texture2D" uid="uid://cvw7se6ywga2a" path="res://assets/Images/wallpaperbetter.com_1920x1080.jpg" id="2_a3dhc"]
 [ext_resource type="FontFile" uid="uid://crh68ah41aafe" path="res://assets/Fonts/04B_30__.TTF" id="3_6p34v"]
 [ext_resource type="AudioStream" uid="uid://cyp1d5qfqdycl" path="res://assets/Music/Soundtracks/Raincoat Adventure.mp3" id="4_s11fd"]
 [ext_resource type="PackedScene" uid="uid://benngalhf7out" path="res://GUI/OptionsMenu.tscn" id="5_64p50"]
+[ext_resource type="AudioStream" uid="uid://3hbjpj0owkjo" path="res://assets/SFX/Select 1.wav" id="6_ipfmb"]
+[ext_resource type="AudioStream" uid="uid://ux1b34ia4omk" path="res://assets/SFX/Cancel 1.wav" id="7_p8vfl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_db3dg"]
 bg_color = Color(0.345098, 0.462745, 0.701961, 0.54902)
@@ -90,3 +92,9 @@ autoplay = true
 
 [node name="OptionsMenu" parent="." instance=ExtResource("5_64p50")]
 visible = false
+
+[node name="SFX_Select" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ipfmb")
+
+[node name="SFX_Cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_p8vfl")

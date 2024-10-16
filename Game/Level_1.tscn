@@ -333,6 +333,7 @@ shape = SubResource("RectangleShape2D_s4r7m")
 
 [node name="CollisionPared" type="Area2D" parent="Pared"]
 position = Vector2(0.238297, -0.667887)
+collision_layer = 16
 script = ExtResource("1_5qoys")
 metadata/_edit_group_ = true
 
@@ -351,7 +352,7 @@ position = Vector2(73, 0)
 [node name="Player1" type="CharacterBody2D" parent="Players"]
 position = Vector2(101, 507.063)
 scale = Vector2(4.24319, 1.70963)
-collision_mask = 10
+collision_mask = 12
 platform_floor_layers = 4294967048
 platform_wall_layers = 4
 script = ExtResource("2_ln6pr")
@@ -373,8 +374,8 @@ autoplay = "Idle"
 position = Vector2(101, 380.546)
 scale = Vector2(4.24319, 1.70963)
 collision_mask = 10
-platform_floor_layers = 4294967048
-platform_wall_layers = 4
+platform_floor_layers = 4294967041
+platform_wall_layers = 12
 script = ExtResource("8_y6jjo")
 metadata/_edit_group_ = true
 
