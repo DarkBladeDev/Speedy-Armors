@@ -15,7 +15,7 @@ corner_radius_bottom_left = 10
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs53v"]
 bg_color = Color(0.223529, 0.227451, 0.423529, 0.694118)
 
-[node name="MainMenu" type="CanvasLayer"]
+[node name="OptionsMenu" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_mqj4a")
 

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GLOBAL="*res://scripts/global.gd"
+PlayerData="*res://Autoloads/PlayerData.tscn"
 
 [display]
 
@@ -74,7 +75,7 @@ Pause={
 2d_physics/layer_2="Enemy"
 2d_physics/layer_3="Pared"
 2d_physics/layer_4="Suelo"
-2d_physics/layer_5="Pared_Incolisionable"
+2d_physics/layer_5="Wall_trigger"
 
 [physics]
 

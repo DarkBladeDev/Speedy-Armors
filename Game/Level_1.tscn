@@ -1,7 +1,5 @@
 [gd_scene load_steps=53 format=3 uid="uid://onnrusv6v4xl"]
 
-[ext_resource type="Script" path="res://scripts/wall.gd" id="1_5qoys"]
-[ext_resource type="Texture2D" uid="uid://b1sir4birf2es" path="res://assets/Sprites/background.jpg" id="1_ta4mq"]
 [ext_resource type="Script" path="res://scripts/player_1.gd" id="2_ln6pr"]
 [ext_resource type="Texture2D" uid="uid://tt5eaj4w483g" path="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Death.png" id="3_88vxj"]
 [ext_resource type="Texture2D" uid="uid://c5i4lhkrjn60m" path="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Fall.png" id="4_kcw52"]
@@ -16,6 +14,14 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s4r7m"]
 size = Vector2(1351.8, 62.4984)
+
+[sub_resource type="Gradient" id="Gradient_h56oy"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pqs61"]
+gradient = SubResource("Gradient_h56oy")
+width = 512
+height = 512
+fill_from = Vector2(1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_doofo"]
 size = Vector2(4.29744, 4.67095)
@@ -318,9 +324,14 @@ shape = SubResource("RectangleShape2D_s4r7m")
 [node name="SpriteSuelo" type="Sprite2D" parent="Suelo"]
 position = Vector2(1, 1)
 scale = Vector2(3.99887, 0.139489)
-texture = ExtResource("1_ta4mq")
+texture = SubResource("GradientTexture2D_pqs61")
 
-[node name="Pared" type="StaticBody2D" parent="."]
+[node name="ColorRect" type="ColorRect" parent="Suelo/SpriteSuelo"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Pared" type="Area2D" parent="."]
 position = Vector2(-121, 309.816)
 scale = Vector2(4.19692, -0.495277)
 collision_layer = 4
@@ -334,7 +345,6 @@ shape = SubResource("RectangleShape2D_s4r7m")
 [node name="CollisionPared" type="Area2D" parent="Pared"]
 position = Vector2(0.238297, -0.667887)
 collision_layer = 16
-script = ExtResource("1_5qoys")
 metadata/_edit_group_ = true
 
 [node name="CollisionPared" type="CollisionShape2D" parent="Pared/CollisionPared"]
@@ -373,7 +383,7 @@ autoplay = "Idle"
 [node name="Player2" type="CharacterBody2D" parent="Players"]
 position = Vector2(101, 380.546)
 scale = Vector2(4.24319, 1.70963)
-collision_mask = 10
+collision_mask = 12
 platform_floor_layers = 4294967041
 platform_wall_layers = 12
 script = ExtResource("8_y6jjo")
@@ -401,3 +411,6 @@ stream = ExtResource("12_3yudu")
 
 [node name="SFX_Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_66ou6")
+
+[connection signal="area_entered" from="Pared/CollisionPared" to="Players/Player1" method="_on_collision_pared_area_entered"]
+[connection signal="area_entered" from="Pared/CollisionPared" to="Players/Player2" method="_on_collision_pared_area_entered"]
