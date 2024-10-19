@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cvw7se6ywga2a" path="res://assets/Images/wallpaperbetter.com_1920x1080.jpg" id="2_7glyi"]
 [ext_resource type="FontFile" uid="uid://crh68ah41aafe" path="res://assets/Fonts/04B_30__.TTF" id="3_fg787"]
 [ext_resource type="Script" path="res://scripts/audio.gd" id="4_t4gfq"]
+[ext_resource type="Texture2D" uid="uid://ctf8ssg7dvdqh" path="res://assets/Pixel Adventure 1/Free/Menu/Buttons/Volume.png" id="5_kymm8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u0fo6"]
 bg_color = Color(0.345098, 0.462745, 0.701961, 0.403922)
@@ -11,9 +12,6 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs53v"]
-bg_color = Color(0.223529, 0.227451, 0.423529, 0.694118)
 
 [node name="OptionsMenu" type="CanvasLayer"]
 process_mode = 3
@@ -50,12 +48,10 @@ offset_bottom = 66.5584
 scale = Vector2(0.329496, 0.487482)
 script = ExtResource("4_t4gfq")
 
-[node name="SFXLabel" type="Label" parent="Background/Audio"]
+[node name="SFXLabel" type="TextureRect" parent="Background/Audio"]
+custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_fg787")
-theme_override_font_sizes/font_size = 17
-theme_override_styles/normal = SubResource("StyleBoxFlat_qs53v")
-text = "SFX"
+texture = ExtResource("5_kymm8")
 
 [node name="SFXBar" type="HSlider" parent="Background/Audio"]
 layout_mode = 2
