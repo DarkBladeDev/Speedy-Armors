@@ -412,5 +412,5 @@ stream = ExtResource("12_3yudu")
 [node name="SFX_Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_66ou6")
 
-[connection signal="area_entered" from="Pared/CollisionPared" to="Players/Player1" method="_on_collision_pared_area_entered"]
-[connection signal="area_entered" from="Pared/CollisionPared" to="Players/Player2" method="_on_collision_pared_area_entered"]
+[connection signal="body_entered" from="Pared/CollisionPared" to="Players/Player1" method="_on_collision_pared_body_entered"]
+[connection signal="body_entered" from="Pared/CollisionPared" to="Players/Player2" method="_on_collision_pared_body_entered"]

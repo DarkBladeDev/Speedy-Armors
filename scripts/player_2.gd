@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name player_2
 
 var axis : Vector2
 var death : bool = false
@@ -58,9 +59,7 @@ func move_x():
 	velocity.x = input_axis * move_speed
 
 
-
-
-func _on_collision_pared_area_entered():
-	PlayerData.P2_on_wall = true
-	print("P2")
-	queue_free()
+func _on_collision_pared_body_entered(body: Node2D) -> void:
+	if body is player_2:
+		Animated_sprite.play("Death")
+		queue_free()

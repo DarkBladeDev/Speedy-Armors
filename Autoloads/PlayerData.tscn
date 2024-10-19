@@ -4,3 +4,4 @@
 
 [node name="PlayerData" type="Node"]
 script = ExtResource("1_1puxm")
+score = null

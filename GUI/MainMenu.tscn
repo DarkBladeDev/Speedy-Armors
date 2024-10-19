@@ -68,7 +68,6 @@ offset_top = 37.4854
 offset_right = 139.375
 offset_bottom = 54.4854
 scale = Vector2(0.47525, 1)
-theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("3_6p34v")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_u0fo6")
