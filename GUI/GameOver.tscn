@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ghdeut1g2c1v"]
+[gd_scene load_steps=6 format=3 uid="uid://ghdeut1g2c1v"]
 
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_7tb5o"]
 [ext_resource type="FontFile" uid="uid://crh68ah41aafe" path="res://assets/Fonts/04B_30__.TTF" id="1_p1y6w"]
+[ext_resource type="PackedScene" uid="uid://b3k7uq6x41fe7" path="res://Autoloads/PlayerData.tscn" id="3_h5n5s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhxyc"]
 bg_color = Color(0.345098, 0.462745, 0.701961, 0.54902)
@@ -68,6 +69,7 @@ text = "[center][wave]GAME OVER
 SCORE: 0 [/wave][/center]"
 
 [node name="Options" type="Button" parent="Container"]
+visible = false
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 1
 anchors_preset = 14
@@ -84,6 +86,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_hhxyc")
 text = "Options"
 
 [node name="Quit" type="Button" parent="Container"]
+visible = false
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 1
 anchors_preset = 12
@@ -100,3 +103,7 @@ text = "Quit"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="PlayerData" parent="." instance=ExtResource("3_h5n5s")]
+
+[connection signal="player_died" from="." to="PlayerData" method="game_over"]

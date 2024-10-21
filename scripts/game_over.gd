@@ -5,7 +5,11 @@ extends Control
 @onready var quit_button = $Container/Quit
 @onready var timer = $Timer
 
+signal player_died
+
 func _ready():
-	label.text = "[center][wave]GAME OVER
-SCORE: %s [/wave][/center]" % Main.score
-	Main.score = 0
+	label.text = "[center][wave]GAME ENDED
+SCORE: %s [/wave][/center]" % PlayerData.score
+	PlayerData.score = 0
+	
+	emit_signal("player_died")
