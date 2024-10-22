@@ -20,6 +20,7 @@ corner_radius_bottom_left = 10
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
+visible = false
 script = ExtResource("1_axl7q")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -38,7 +39,6 @@ offset_bottom = 44.0
 scale = Vector2(4.70338, 7.27196)
 theme_override_fonts/font = ExtResource("2_o1f8r")
 theme_override_font_sizes/font_size = 17
-theme_override_styles/normal = SubResource("StyleBoxFlat_iyo45")
 text = "Pause"
 horizontal_alignment = 1
 vertical_alignment = 1

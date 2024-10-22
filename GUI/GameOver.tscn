@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/game_over.gd" id="1_7tb5o"]
 [ext_resource type="FontFile" uid="uid://crh68ah41aafe" path="res://assets/Fonts/04B_30__.TTF" id="1_p1y6w"]
-[ext_resource type="PackedScene" uid="uid://b3k7uq6x41fe7" path="res://Autoloads/PlayerData.tscn" id="3_h5n5s"]
+[ext_resource type="PackedScene" uid="uid://cq0qujqgdw47d" path="res://node.tscn" id="3_h5n5s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhxyc"]
 bg_color = Color(0.345098, 0.462745, 0.701961, 0.54902)
@@ -20,11 +20,7 @@ corner_radius_bottom_left = 10
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_7tb5o")
 
 [node name="Background" type="ColorRect" parent="."]
@@ -105,5 +101,3 @@ text = "Quit"
 wait_time = 3.0
 
 [node name="PlayerData" parent="." instance=ExtResource("3_h5n5s")]
-
-[connection signal="player_died" from="." to="PlayerData" method="game_over"]

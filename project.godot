@@ -15,10 +15,14 @@ run/main_scene="res://GUI/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
-GLOBAL="*res://scripts/global.gd"
 PlayerData="*res://Autoloads/PlayerData.tscn"
+WindowManager="*res://Autoloads/WindowManager.tscn"
 
 [display]
 

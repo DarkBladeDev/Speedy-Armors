@@ -2,6 +2,9 @@ extends CharacterBody2D
 
 class_name player_2
 
+
+signal player_died
+
 var axis : Vector2
 var death : bool = false
 var is_facing_right : bool = true
@@ -10,6 +13,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var Animated_sprite = $AnimatedSprite
 @onready var SFXJump = $"../../SFX_Jump"
 @onready var WallHitbox = $"../../Pared"
+@onready var timer = $"../../DeathTimer"
 
 @export_group("Motion")
 @export var move_speed : float = 200
@@ -62,4 +66,7 @@ func move_x():
 func _on_collision_pared_body_entered(body: Node2D) -> void:
 	if body is player_2:
 		Animated_sprite.play("Death")
-		queue_free()
+		timer.start(1.5)
+		if timer.timeout:
+			emit_signal("player_died")
+			queue_free()

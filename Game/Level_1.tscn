@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://onnrusv6v4xl"]
+[gd_scene load_steps=54 format=3 uid="uid://onnrusv6v4xl"]
 
 [ext_resource type="Script" path="res://scripts/player_1.gd" id="2_ln6pr"]
 [ext_resource type="Texture2D" uid="uid://tt5eaj4w483g" path="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Death.png" id="3_88vxj"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ctd77jtuaqqjt" path="res://assets/FreeKnight_v1/Colour1/Outline/120x80_PNGSheets/_Run.png" id="7_341ah"]
 [ext_resource type="PackedScene" uid="uid://ck5lrw268mgfy" path="res://GUI/PauseMenu.tscn" id="8_1ff55"]
 [ext_resource type="Script" path="res://scripts/player_2.gd" id="8_y6jjo"]
+[ext_resource type="PackedScene" uid="uid://ghdeut1g2c1v" path="res://GUI/GameOver.tscn" id="9_8detw"]
 [ext_resource type="AudioStream" uid="uid://3hbjpj0owkjo" path="res://assets/SFX/Select 1.wav" id="11_86its"]
 [ext_resource type="AudioStream" uid="uid://ux1b34ia4omk" path="res://assets/SFX/Cancel 1.wav" id="12_3yudu"]
 [ext_resource type="AudioStream" uid="uid://b3x7w5la5p4cv" path="res://assets/SFX/Jump 1.wav" id="13_66ou6"]
@@ -401,7 +402,11 @@ sprite_frames = SubResource("SpriteFrames_2ic23")
 animation = &"Idle"
 autoplay = "Idle"
 
+[node name="GameOver" parent="." instance=ExtResource("9_8detw")]
+visible = false
+
 [node name="PauseMenu" parent="." instance=ExtResource("8_1ff55")]
+visible = false
 
 [node name="SFX_Select" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_86its")
@@ -411,6 +416,8 @@ stream = ExtResource("12_3yudu")
 
 [node name="SFX_Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_66ou6")
+
+[node name="DeathTimer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="Pared/CollisionPared" to="Players/Player1" method="_on_collision_pared_body_entered"]
 [connection signal="body_entered" from="Pared/CollisionPared" to="Players/Player2" method="_on_collision_pared_body_entered"]
