@@ -406,7 +406,6 @@ autoplay = "Idle"
 visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("8_1ff55")]
-visible = false
 
 [node name="SFX_Select" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_86its")
