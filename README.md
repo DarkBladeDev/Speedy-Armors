@@ -22,62 +22,16 @@ Estas instrucciones te guiarán para obtener una copia de este proyecto en funci
 Lista de software y herramientas, incluyendo versiones, que necesitas para instalar y ejecutar este proyecto:
 
 - Windows (10, 11)
-- Lenguaje de programación (por ejemplo, Python 3.8)
-- Framework (por ejemplo, Django 3.1)
-- Base de datos (por ejemplo, PostgreSQL 12)
-- Otros...
-
-### Instalación 🔧
-
-Una guía paso a paso sobre cómo configurar el entorno de desarrollo e instalar todas las dependencias.
-
-```bash
-# paso 1
-```
-
-Y así sucesivamente...
-
-```bash
-# paso 2
-```
-
-## Ejecutando las Pruebas ⚙️
-
-Instrucciones y ejemplos para ejecutar el conjunto de pruebas.
-
-```bash
-# proporciona un ejemplo
-```
-
-### Pruebas de Principio a Fin 🔩
-
-Explica qué cubren estas pruebas, por qué son importantes y cómo interpretar sus resultados.
-
-### Pruebas de Estilo de Código ⌨️
-
-Descripción y ejemplos de las pruebas de estilo que estás utilizando.
-
-```bash
-# proporciona un ejemplo
-```
-
-## Despliegue 📦
-
-Instrucciones sobre cómo desplegar esto en un sistema en vivo o ambiente de producción.
+- RAM (Minimo 1GB)
+- Procesador (Minimo INTEL Celeron)
 
 ## Construido Con 🛠️
 
-Explica qué tecnologías usaste para construir este proyecto. Aquí algunos ejemplos:
-
-- [Ruby](https://www.ruby-lang.org/es/) - El lenguaje utilizado
-- [Ruby on Rails](https://rubyonrails.org) - El framework web utilizado
-- [Ruby gems](https://rubygems.org) - Gestión de dependencias
-- [Postgresql](https://www.postgresql.org) - Sistema de base de datos
-- [Bulma IO](https://bulma.io) - Framework de CSS
+- [GODOT 4](https://godotengine.org/) - El motor utilizado
 
 ## Contribuyendo 🖇️
 
-Las contribuciones son lo que hacen a la comunidad de código abierto un lugar increíble para aprender, inspirar y crear. Cualquier contribución que hagas es muy apreciada. Por favor, lee el [CONTRIBUTING.md](https://gist.github.com/brayandiazc/xxxxxx) para detalles sobre nuestro código de conducta, y el proceso para enviarnos pull requests.
+Las contribuciones son lo que hacen a la comunidad de código abierto un lugar increíble para aprender, inspirar y crear. Cualquier contribución que hagas es muy apreciada. Por favor, lee el [CONTRIBUTING.md](https://gist.github.com/DarkBladeDev) para detalles sobre nuestro código de conducta, y el proceso para enviarnos pull requests.
 
 ## Wiki 📖
 
