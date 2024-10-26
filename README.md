@@ -21,7 +21,7 @@ Estas instrucciones te guiarán para obtener una copia de este proyecto en funci
 
 Lista de software y herramientas, incluyendo versiones, que necesitas para instalar y ejecutar este proyecto:
 
-- Sistema Operativo (por ejemplo, Ubuntu 20.04, Windows 10)
+- Windows (10, 11)
 - Lenguaje de programación (por ejemplo, Python 3.8)
 - Framework (por ejemplo, Django 3.1)
 - Base de datos (por ejemplo, PostgreSQL 12)
