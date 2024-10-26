@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-
+@onready var PauseMenu = $"."
 @onready var OptionsButton = $Options
 @onready var ResumeButton = $Resume
 @onready var QuitButton = $Quit
@@ -19,22 +19,28 @@ func _physics_process(_delta: float) -> void:
 func pause_event():
 	if Input.is_action_just_pressed("Pause"):
 		get_tree().paused = not get_tree().paused
+		PauseMenu.visible = not PauseMenu.visible
+		
+		"""
 		$ColorRect.visible = not $ColorRect.visible
 		$Label.visible = not $Label.visible
 		$Resume.visible = not $ColorRect.visible
 		$Options.visible = not $Options.visible
 		$Quit.visible = not $Quit.visible
-
+		"""
 
 
 func options_in_pause_event():
 	if OptionsButton.button_pressed:
+		
+		"""
 		$ColorRect.visible = not $ColorRect.visible
 		$Label.visible = not $Label.visible
 		$Resume.visible = not $ColorRect.visible
 		$Options.visible = not $Options.visible
 		$Quit.visible = not $Quit.visible
-		
+		"""
+		PauseMenu.visible = not PauseMenu.visible
 		$OptionsMenu.visible = not $OptionsMenu.visible
 
 
@@ -42,7 +48,9 @@ func options_in_pause_event():
 
 func resume_in_pause_event():
 	if ResumeButton.button_pressed:
+		PauseMenu.visible = not PauseMenu.visible
 		get_tree().paused = not get_tree().paused
+		
 
 
 

@@ -8,24 +8,26 @@ extends Control
 
 
 
-func _ready():
+func game_ended():
+	get_tree().paused = true
 	curtain.visible = true
 
 	label.text = "[center][wave]GAME ENDED
-WINNER: %s [/wave][/center]" % PlayerData.winner
+	WINNER: %s [/wave][/center]" % PlayerData.winner
 
 	PlayerData.winner = "None"
 	
-	timer.start(3)
+	timer.start()
 	if timer.timeout:
 		options_button.visible = true
 		quit_button.visible = true
-
-
+		
 
 func _on_player_1_player_died() -> void:
 	PlayerData.winner = "Player 1"
+	game_ended()
 
 
 func _on_player_2_player_died() -> void:
 	PlayerData.winner = "Player 2"
+	game_ended()

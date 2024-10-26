@@ -1,5 +1,7 @@
 extends Control
 
+
+@onready var MainMenu = $"."
 @onready var PlayButton = $TextureRect/Play
 @onready var OptionsButton = $TextureRect/Options
 @onready var QuitButton = $TextureRect/Quit
@@ -18,6 +20,7 @@ func _process(_delta: float) -> void:
 func play_button_event():
 	if PlayButton.button_pressed:
 		SFXSelect.play()
+		MainMenu.visible = false
 		get_tree().change_scene_to_file("res://Game/Level_1.tscn")
 
 
