@@ -10,7 +10,8 @@ En desarrollo..
 
 ## Visuales
 
-Capturas de pantalla, videos o GIFs que demuestran lo que hace el proyecto y cómo usarlo.
+![MenuPrincipal](https://github.com/user-attachments/assets/adcfc23d-93a6-4a06-8ffa-a2bf5dcd2ca0)
+
 
 ## Empezando 🚀
 
