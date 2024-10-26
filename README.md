@@ -54,6 +54,7 @@ Usamos [Git](https://git-scm.com) para el versionado. Para las versiones disponi
 ## Autores ✒️
 
 - **DarkBladeDev** - _Programador_ - [Perfil](https://github.com/DarkBladeDev)
+- **SamuCL4811** - _Diseñador de Assets_ - [Perfil](https://github.com/SamuCL4811)
 
 Mira también la lista de [contribuidores](https://github.com/DarkBladeDev/Speedy-Armors/contributors) que han participado en este proyecto.
 
