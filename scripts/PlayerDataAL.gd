@@ -2,6 +2,7 @@ extends Node
 
 
 signal player_died(player)
+signal game_started
 
 
 @export_category("Game variables")

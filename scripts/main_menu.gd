@@ -22,6 +22,7 @@ func play_button_event():
 		SFXSelect.play()
 		MainMenu.visible = false
 		get_tree().change_scene_to_file("res://Game/Level_1.tscn")
+		PlayerData.emit_signal("game_started")
 
 
 func options_button_event():
