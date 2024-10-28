@@ -28,6 +28,7 @@ Lista de software y herramientas, incluyendo versiones, que necesitas para insta
 ## Construido Con 🛠️
 
 - [GODOT 4](https://godotengine.org/) - El motor utilizado
+- [Itch.io](https://itch.io) - La biblioteca de assets
 
 ## Contribuyendo 🖇️
 
@@ -35,11 +36,11 @@ Las contribuciones son lo que hacen a la comunidad de código abierto un lugar i
 
 ## Wiki 📖
 
-Puedes encontrar mucho más sobre cómo usar este proyecto en nuestra [Wiki](https://github.com/your/project/wiki)
+Puedes encontrar mucho más sobre cómo usar este proyecto en nuestra [Wiki](https://github.com/DarkBladeDev/Speedy-Armors/wiki)
 
 ## Soporte
 
-Si tienes algún problema o sugerencia, por favor abre un problema [aquí](https://github.com/your/project/issues).
+Si tienes algún problema o sugerencia, por favor abre un problema [aquí](https://github.com/DarkBladeDev/Speedy-Armors/issues).
 
 ## Roadmap
 
